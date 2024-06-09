@@ -51,10 +51,26 @@ a {
   cursor: pointer;
   opacity: 0.9;
 }
+
+.line-clamp {
+  display: --webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp .line-2 {
+  --line-clamp: 2;
+}
+
+.break-all {
+  word-break: break-all;
+}
 /* header */
 .header {
   background: #fffcf4;
 }
+
 .header.fix {
   z-index: 1;
   position: sticky;
@@ -66,24 +82,29 @@ a {
   align-items: center;
   padding: 36px 0 8px;
 }
+
 nav {
   margin-left: auto;
 }
+
 .nav ul {
   display: flex;
 }
+
 .nav a {
   position: relative;
   color: #5f5b53;
   font-size: 1.6rem;
   padding: 8px 21px;
 }
+
 .nav a:hover {
   color: #171100;
   font-style: normal;
   /* font-weight: 600; */
   text-shadow: 1px 0 0 currentColor;
 }
+
 .nav li.active a::after {
   position: absolute;
   left: 21px;
@@ -95,6 +116,7 @@ nav {
   border-radius: 1px;
   background: #171100;
 }
+
 .header .btn-sign-up {
   min-width: 144px;
 }
@@ -315,6 +337,7 @@ nav {
 }
 
 .popular .course-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
