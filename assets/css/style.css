@@ -416,8 +416,15 @@ nav {
   background: #2e2100;
 }
 
-.feeback-item {
+.feedback-list {
   display: flex;
+  overflow: hidden;
+}
+
+.feeback-item {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
 }
 
 .feeback-item .avatar {
